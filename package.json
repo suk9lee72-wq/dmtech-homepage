@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+"scripts": {
+  "build": "mkdir dist && copy index.html dist\\index.html && xcopy public dist /E /I /Y"
+}
   },
   "dependencies": {
     "react": "^19.2.6",
