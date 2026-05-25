@@ -48,6 +48,65 @@ header{position:fixed;top:0;left:0;z-index:1000;width:100vw;background:rgba(255,
   box-shadow:0 14px 30px rgba(0,119,163,.28) !important;
 }
 
+/* Mobile hero layout - image top, text below */
+@media(max-width:768px){
+  .hero{
+    background:#fff !important;
+    min-height:auto !important;
+    padding:0 24px 42px !important;
+    text-align:left !important;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+  }
+
+  .hero::before{
+    content:"";
+    display:block;
+    width:calc(100% + 48px);
+    height:235px;
+    margin:0 -24px 34px;
+    background:url('/public/wafer-main.png') center center / cover no-repeat;
+  }
+
+  .hero h1{
+    font-size:40px !important;
+    line-height:1.08 !important;
+    letter-spacing:-1.8px !important;
+    color:#111820 !important;
+    text-align:left !important;
+    max-width:100% !important;
+    text-shadow:none !important;
+  }
+
+  .hero p{
+    font-size:18px !important;
+    line-height:1.55 !important;
+    color:#334155 !important;
+    margin:16px 0 22px !important;
+    text-align:left !important;
+    text-shadow:none !important;
+  }
+
+  .hero-action{
+    justify-content:flex-start !important;
+    align-items:flex-start !important;
+    gap:12px !important;
+  }
+
+  .hero-btn{
+    width:auto !important;
+    min-width:170px !important;
+    font-size:15px !important;
+    padding:14px 20px !important;
+    border-radius:999px !important;
+  }
+
+  .support-badge{
+    font-size:13px !important;
+    padding:11px 14px !important;
+  }
+}
+
 </style>
 </head>
 <body>
