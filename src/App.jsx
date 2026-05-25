@@ -81,7 +81,7 @@ export default function App() {
 
           <div className="rounded-md border border-[#d9e1e7] bg-[#f5f7f8] p-3 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
             <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"
+              src="/wafer-main.png"
               alt="Semiconductor"
               className="h-[430px] w-full rounded-sm object-cover"
             />
