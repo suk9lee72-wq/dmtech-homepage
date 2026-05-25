@@ -1,21 +1,20 @@
-export default function DMTechNXPPreview() {
+export default function App() {
   const products = [
-    'ESC',
-    'Chamber Parts',
-    'Quartz Parts',
-    'Vacuum Components',
-    'Gas Line Parts',
-    'RF Components',
-    'Wafer Fabrication',
-    'Clean Room',
-    'Equipment Maintenance',
-    'Industrial Materials',
-    'Advanced Equipment Parts Supply',
+    "ESC",
+    "Chamber Parts",
+    "Quartz Parts",
+    "Vacuum Components",
+    "Gas Line Parts",
+    "RF Components",
+    "Wafer Fabrication",
+    "Clean Room",
+    "Equipment Maintenance",
+    "Industrial Materials",
+    "Advanced Equipment Parts Supply",
   ];
 
   return (
     <div className="min-h-screen bg-[#f5f7f8] text-[#1f2933] font-sans">
-      {/* HEADER - 기존 구조 최대 유지 */}
       <header className="sticky top-0 z-50 border-b border-[#d9e1e7] bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
           <img
@@ -23,6 +22,7 @@ export default function DMTechNXPPreview() {
             alt="DMTech"
             className="h-7 w-auto md:h-9"
           />
+
           <nav className="flex items-center gap-5 text-[13px] font-semibold text-[#26323f] md:gap-7 md:text-[14px]">
             <a href="#">About</a>
             <a href="#">Products</a>
@@ -37,7 +37,6 @@ export default function DMTechNXPPreview() {
         </div>
       </header>
 
-      {/* HERO - 이전 구조 유지 / 스타일만 제조업 느낌 */}
       <section className="border-b border-[#d9e1e7] bg-white">
         <div className="h-[3px] w-full bg-gradient-to-r from-[#fcb316] via-[#6d9a45] to-[#0077a3]" />
 
@@ -52,12 +51,11 @@ export default function DMTechNXPPreview() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#667085]">
-              DMTech supports sourcing for semiconductor equipment parts,
-              ESC, chamber parts, vacuum systems, RF components,
-              quartz parts, and industrial materials.
+              DMTech supports sourcing for semiconductor equipment parts, ESC,
+              chamber parts, vacuum systems, RF components, quartz parts, and
+              industrial materials.
             </p>
 
-            {/* 기존 검색 구조 유지 */}
             <div className="mt-9 flex overflow-hidden rounded-sm border border-[#d9e1e7] bg-white shadow-[0_10px_26px_rgba(15,23,42,0.06)]">
               <input
                 type="text"
@@ -70,7 +68,6 @@ export default function DMTechNXPPreview() {
               </button>
             </div>
 
-            {/* 기존 버튼 흐름 유지 */}
             <div className="mt-7 flex flex-wrap gap-3">
               <button className="rounded-sm bg-[#0077a3] px-6 py-3 text-sm font-bold text-white hover:bg-[#005f82]">
                 View Products
@@ -82,7 +79,6 @@ export default function DMTechNXPPreview() {
             </div>
           </div>
 
-          {/* 기존 우측 이미지 구조 유지 */}
           <div className="rounded-md border border-[#d9e1e7] bg-[#f5f7f8] p-3 shadow-[0_14px_34px_rgba(15,23,42,0.08)]">
             <img
               src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop"
@@ -93,7 +89,6 @@ export default function DMTechNXPPreview() {
         </div>
       </section>
 
-      {/* PRODUCTS - 카드 구조 유지 */}
       <section className="mx-auto max-w-7xl px-5 py-20">
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
@@ -107,8 +102,8 @@ export default function DMTechNXPPreview() {
           </div>
 
           <p className="max-w-md text-sm leading-7 text-[#667085]">
-            기존 프로토타입 구조는 유지하고,
-            NXP 스타일 기반 제조업 느낌만 적용한 버전.
+            기존 프로토타입 구조는 유지하고, NXP 스타일 기반 제조업
+            느낌만 적용한 버전.
           </p>
         </div>
 
@@ -119,7 +114,13 @@ export default function DMTechNXPPreview() {
               className="group rounded-md border border-[#d9e1e7] bg-white p-6 shadow-[0_10px_24px_rgba(15,23,42,0.05)] transition-all duration-200 hover:-translate-y-1 hover:border-[#0077a355] hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)]"
             >
               <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-sm bg-[#eef6fa] text-[#0077a3]">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
                   <path d="M4 7h16M4 12h16M4 17h16" />
                   <path d="M8 4v16M16 4v16" />
                 </svg>
@@ -137,7 +138,6 @@ export default function DMTechNXPPreview() {
         </div>
       </section>
 
-      {/* RFQ - 이전 끝 구조 유지 */}
       <section className="bg-[#17212b] px-5 py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-start">
           <div>
@@ -150,8 +150,8 @@ export default function DMTechNXPPreview() {
             </h2>
 
             <p className="mt-5 max-w-xl leading-8 text-[#cbd5df]">
-              Please include manufacturer, part number,
-              condition, quantity, and delivery schedule.
+              Please include manufacturer, part number, condition, quantity, and
+              delivery schedule.
             </p>
           </div>
 
@@ -185,7 +185,6 @@ export default function DMTechNXPPreview() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="bg-[#111820] px-5 py-8 text-sm text-[#cbd5df]">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 md:flex-row">
           <p>© DMTech. Semiconductor Parts Sourcing.</p>
