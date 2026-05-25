@@ -40,23 +40,23 @@ export default function App() {
       <section className="border-b border-[#d9e1e7] bg-white">
         <div className="h-[3px] w-full bg-gradient-to-r from-[#fcb316] via-[#6d9a45] to-[#0077a3]" />
 
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-2 lg:items-center">
+        <div className="max-w-3xl text-[34px] font-bold leading-[1.02] tracking-[-0.05em] text-[#17212b] md:text-[72px]">
           <div>
             <div className="mb-5 inline-flex rounded-sm border border-[#d9e1e7] bg-[#f5f7f8] px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#667085]">
               Semiconductor Parts Sourcing
             </div>
 
-            <h1 className="max-w-3xl text-[44px] font-bold leading-[1.03] tracking-[-0.05em] text-[#17212b] md:text-[72px]">
+            <h1 >
               Semiconductor Parts Sourcing
             </h1>
 
-            <p className="mt-6 max-w-2xl text-[17px] leading-8 text-[#667085]">
+            <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[#4b5563] md:text-[17px] md:leading-8">
               DMTech supports sourcing for semiconductor equipment parts, ESC,
               chamber parts, vacuum systems, RF components, quartz parts, and
               industrial materials.
             </p>
 
-            <div className="mt-9 flex overflow-hidden rounded-sm border border-[#d9e1e7] bg-white shadow-[0_10px_26px_rgba(15,23,42,0.06)]">
+            <div className="mt-6 flex overflow-hidden rounded-sm border border-[#d9e1e7] bg-white shadow-[0_10px_26px_rgba(15,23,42,0.06)]">
               <input
                 type="text"
                 placeholder="Search products or part number"
@@ -72,7 +72,7 @@ export default function App() {
               <button className="rounded-sm bg-[#0077a3] px-6 py-3 text-sm font-bold text-white hover:bg-[#005f82]">
                 View Products
               </button>
-
+className="max-w-3xl text-[44px] font-bold leading-[1.03] tracking-[-0.05em] text-[#17212b] md:text-[72px]"
               <button className="rounded-sm border border-[#0077a3] bg-white px-6 py-3 text-sm font-bold text-[#0077a3] hover:bg-[#eef6fa]">
                 Request Quote
               </button>
@@ -83,7 +83,7 @@ export default function App() {
             <img
               src="/wafer-main.png"
               alt="Semiconductor"
-              className="h-[430px] w-full rounded-sm object-cover"
+              className="h-[240px] w-full rounded-sm object-cover md:h-[430px]"
             />
           </div>
         </div>
