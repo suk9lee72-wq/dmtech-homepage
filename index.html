@@ -1,470 +1,430 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DMTech</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
+<title>DMTech</title>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+<style>
 
-    body{
-      background:#020817;
-      color:white;
-      overflow-x:hidden;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
 
-    .page-wrapper{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      background:
-      radial-gradient(circle at top right,#12304d 0%,#020817 35%);
-    }
+body{
+  background:#020817;
+  color:white;
+  overflow-x:hidden;
+}
 
-    .header{
-      width:100%;
-      background:#020617;
-      border-bottom:1px solid rgba(255,255,255,0.05);
-      position:sticky;
-      top:0;
-      z-index:9999;
-    }
+/* HEADER */
 
-    .header-inner{
-      max-width:1280px;
-      margin:0 auto;
-      padding:14px 28px;
-    }
+header{
+  width:100%;
+  position:sticky;
+  top:0;
+  z-index:9999;
+  background:#020817;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
 
-    .header-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+.header-inner{
+  max-width:1400px;
+  margin:0 auto;
+  padding:14px 28px;
+}
 
-    .logo-image img{
-      height:38px;
-      width:auto;
-      display:block;
-      cursor:pointer;
-    }
+/* TOP */
 
-    .menu{
-      display:flex;
-      gap:42px;
-      align-items:center;
-    }
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    .menu a{
-      color:white;
-      text-decoration:none;
-      font-size:17px;
-      font-weight:600;
-      opacity:0.9;
-    }
+/* LOGO */
 
-    .home-icon-btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+.logo-image img{
+  height:38px;
+  width:auto;
+  display:block;
+  cursor:pointer;
+}
 
-    .search-wrap{
-      margin-top:18px;
-    }
+/* MENU */
 
-    .search-box{
-      width:100%;
-      height:58px;
-      border-radius:16px;
-      background:white;
-      display:flex;
-      align-items:center;
-      padding:0 18px;
-    }
+.menu{
+  display:flex;
+  gap:34px;
+  align-items:center;
+}
 
-    .search-box input{
-      flex:1;
-      border:none;
-      outline:none;
-      font-size:20px;
-    }
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+  opacity:0.9;
+}
 
-    .hero-section{
-      width:100%;
-      padding-top:30px;
-      padding-bottom:20px;
-      background:
-      linear-gradient(to right,#08142d 0%,#102844 50%,#08142d 100%);
-    }
+/* SEARCH */
 
-    .hero-inner{
-      max-width:1280px;
-      margin:0 auto;
-      padding:0 28px;
-    }
+.search-wrap{
+  margin-top:18px;
+}
 
-    .parts-title-row{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:18px;
-    }
+.search-box{
+  width:100%;
+  height:58px;
+  border-radius:16px;
+  background:white;
+  display:flex;
+  align-items:center;
+  padding:0 18px;
+}
 
-    .parts-title{
-      font-size:58px;
-      font-weight:900;
-      letter-spacing:-2px;
-    }
+.search-box input{
+  flex:1;
+  border:none;
+  outline:none;
+  font-size:18px;
+}
 
-    .parts-count{
-      font-size:28px;
-      opacity:0.8;
-    }
+/* HERO */
 
-    .filters{
-      display:flex;
-      gap:18px;
-      margin-bottom:24px;
-      flex-wrap:wrap;
-    }
+.hero{
+  width:100%;
+  background:
+  radial-gradient(circle at top right,#18314d 0%,#020817 35%);
+  padding:34px 0 24px;
+}
 
-    .filter-select{
-      width:220px;
-      height:54px;
-      border-radius:14px;
-      background:#1b2942;
-      border:1px solid rgba(255,255,255,0.1);
-      color:white;
-      padding:0 16px;
-      font-size:16px;
-    }
+.hero-inner{
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 28px;
+}
 
-    .products-section{
-      flex:1;
-      width:100%;
-      background:
-      radial-gradient(circle at top right,#12304d 0%,#020817 35%);
-      padding-bottom:80px;
-    }
+.parts-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+}
 
-    .products-inner{
-      max-width:1280px;
-      margin:0 auto;
-      padding:30px 28px 0;
-    }
+.parts-title{
+  font-size:54px;
+  font-weight:900;
+  letter-spacing:-2px;
+}
 
-    .products-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:26px;
-    }
+.parts-count{
+  font-size:26px;
+  opacity:0.8;
+}
 
-    .product-card{
-      background:#020b25;
-      border-radius:22px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,0.08);
-    }
+/* FILTERS */
 
-    .product-image{
-      background:#efefef;
-      height:320px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+.filters{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
 
-    .product-image img{
-      width:72%;
-      object-fit:contain;
-    }
+.filter-select{
+  width:220px;
+  height:52px;
+  border-radius:14px;
+  border:none;
+  background:#10213b;
+  color:white;
+  padding:0 14px;
+  font-size:15px;
+}
 
-    .product-info{
-      padding:28px;
-    }
+/* PRODUCTS */
 
-    .product-title{
-      font-size:34px;
-      font-weight:800;
-      margin-bottom:16px;
-    }
+.products{
+  max-width:1400px;
+  margin:0 auto;
+  padding:24px 28px 80px;
+}
 
-    .product-info p{
-      font-size:22px;
-      margin-bottom:8px;
-    }
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
+}
 
-    .quote-btn{
-      margin-top:18px;
-      border:none;
-      background:#43b4ff;
-      color:black;
-      padding:16px 28px;
-      border-radius:16px;
-      font-size:18px;
-      font-weight:700;
-      cursor:pointer;
-    }
+.product-card{
+  background:#081225;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.06);
+}
 
-    .footer{
-      width:100%;
-      background:#020617;
-      border-top:1px solid rgba(255,255,255,0.05);
-      padding:28px;
-      text-align:center;
-      font-size:15px;
-      opacity:0.7;
-    }
+.product-image{
+  height:320px;
+  background:#f2f2f2;
+}
 
-    @media(max-width:768px){
+.product-info{
+  padding:28px;
+}
 
-      .header-inner{
-        padding:12px 14px;
-      }
+.product-title{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:14px;
+}
 
-      .logo-image img{
-        height:28px;
-      }
+.product-info p{
+  font-size:20px;
+  margin-bottom:8px;
+}
 
-      .menu{
-        gap:18px;
-      }
+.quote-btn{
+  margin-top:18px;
+  border:none;
+  background:#43b4ff;
+  color:black;
+  padding:16px 28px;
+  border-radius:14px;
+  font-size:17px;
+  font-weight:700;
+  cursor:pointer;
+}
 
-      .menu a{
-        font-size:13px;
-      }
+/* FOOTER */
 
-      .search-box{
-        height:48px;
-      }
+footer{
+  width:100%;
+  background:#020617;
+  border-top:1px solid rgba(255,255,255,0.05);
+  padding:28px;
+  text-align:center;
+  color:rgba(255,255,255,0.7);
+  font-size:14px;
+}
 
-      .search-box input{
-        font-size:16px;
-      }
+/* MOBILE */
 
-      .hero-section{
-        padding-top:14px;
-      }
+@media(max-width:768px){
 
-      .hero-inner{
-        padding:0 14px;
-      }
+  .header-inner{
+    padding:12px 22px 14px;
+  }
 
-      .parts-title{
-        font-size:30px;
-      }
+  .logo-image img{
+    height:28px;
+  }
 
-      .parts-count{
-        font-size:18px;
-      }
+  .menu{
+    gap:16px;
+  }
 
-      .filters{
-        gap:10px;
-        margin-bottom:10px;
-      }
+  .menu a{
+    font-size:12px;
+  }
 
-      .filter-select{
-        width:100%;
-        height:46px;
-      }
+  .search-box{
+    height:48px;
+  }
 
-      .products-inner{
-        padding:18px 14px 0;
-      }
+  .search-box input{
+    font-size:15px;
+  }
 
-      .products-grid{
-        grid-template-columns:1fr;
-      }
+  .hero{
+    padding:18px 0 12px;
+  }
 
-      .product-image{
-        height:240px;
-      }
+  .hero-inner{
+    padding:0 22px;
+  }
 
-      .product-title{
-        font-size:26px;
-      }
+  .parts-title{
+    font-size:32px;
+  }
 
-      .product-info p{
-        font-size:18px;
-      }
+  .parts-count{
+    font-size:18px;
+  }
 
-    }
+  .filters{
+    gap:10px;
+  }
 
-  </style>
+  .filter-select{
+    width:100%;
+    height:46px;
+  }
+
+  .products{
+    padding:18px 22px 70px;
+  }
+
+  .products-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-image{
+    height:240px;
+  }
+
+  .product-title{
+    font-size:24px;
+  }
+
+  .product-info p{
+    font-size:17px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="page-wrapper">
+<header>
 
-  <header class="header">
+  <div class="header-inner">
 
-    <div class="header-inner">
+    <div class="header-top">
 
-      <div class="header-top">
-
-        <div class="logo-image" onclick="location.reload()">
-          <img src="./public/logo.png" alt="DMTech Logo">
-        </div>
-
-        <nav class="menu">
-          <a href="#">Products</a>
-          <a href="#">Repair</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-
-        <a href="#" class="home-icon-btn">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M3 10.5L12 3L21 10.5"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-            <path d="M5 9.5V20H19V9.5"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-          </svg>
-        </a>
-
+      <!-- LOGO -->
+      <div class="logo-image">
+        <img src="./public/logo.png" alt="DMTech Logo">
       </div>
 
-      <div class="search-wrap">
+      <!-- MENU -->
+      <nav class="menu">
+        <a href="#">Products</a>
+        <a href="#">Repair</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
 
-        <div class="search-box">
+    </div>
 
-          <input
-            type="text"
-            placeholder="Request Quote Part Number..."
-          >
+    <!-- SEARCH -->
+    <div class="search-wrap">
 
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="11" cy="11" r="7"
-              stroke="#111"
-              stroke-width="2"/>
-            <path d="M20 20L17 17"
-              stroke="#111"
-              stroke-width="2"
-              stroke-linecap="round"/>
-          </svg>
+      <div class="search-box">
 
-        </div>
+        <input
+          type="text"
+          placeholder="Request Quote Part Number..."
+        >
 
       </div>
 
     </div>
 
-  </header>
+  </div>
 
-  <section class="hero-section">
+</header>
 
-    <div class="hero-inner">
+<!-- HERO -->
 
-      <div class="parts-title-row">
+<section class="hero">
 
-        <div class="parts-title">
-          ESC Parts
-        </div>
+  <div class="hero-inner">
 
-        <div class="parts-count">
-          482 Parts
-        </div>
+    <div class="parts-row">
 
+      <div class="parts-title">
+        ESC Parts
       </div>
 
-      <div class="filters">
+      <div class="parts-count">
+        482 Parts
+      </div>
 
-        <select class="filter-select">
-          <option>Manufacturer</option>
-        </select>
+    </div>
 
-        <select class="filter-select">
-          <option>Source Type</option>
-        </select>
+    <!-- FILTERS -->
 
-        <select class="filter-select">
-          <option>Condition</option>
-        </select>
+    <div class="filters">
+
+      <select class="filter-select">
+        <option>Manufacturer</option>
+      </select>
+
+      <select class="filter-select">
+        <option>Source Type</option>
+      </select>
+
+      <select class="filter-select">
+        <option>Condition</option>
+      </select>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+  <div class="products-grid">
+
+    <div class="product-card">
+
+      <div class="product-image"></div>
+
+      <div class="product-info">
+
+        <div class="product-title">
+          ESC Chuck
+        </div>
+
+        <p><strong>OEM:</strong> TEL</p>
+        <p><strong>Condition:</strong> USED</p>
+
+        <button class="quote-btn">
+          Request Quote
+        </button>
 
       </div>
 
     </div>
 
-  </section>
+    <div class="product-card">
 
-  <section class="products-section">
+      <div class="product-image"></div>
 
-    <div class="products-inner">
+      <div class="product-info">
 
-      <div class="products-grid">
-
-        <div class="product-card">
-
-          <div class="product-image">
-            <img src="./public/esc.png">
-          </div>
-
-          <div class="product-info">
-
-            <div class="product-title">
-              ESC Chuck
-            </div>
-
-            <p><strong>OEM:</strong> TEL</p>
-            <p><strong>Condition:</strong> USED</p>
-
-            <button class="quote-btn">
-              Request Quote
-            </button>
-
-          </div>
-
+        <div class="product-title">
+          0010-16392
         </div>
 
-        <div class="product-card">
+        <p><strong>OEM:</strong> AMAT</p>
+        <p><strong>Condition:</strong> Refurbished</p>
 
-          <div class="product-image">
-            <img src="./public/esc.png">
-          </div>
-
-          <div class="product-info">
-
-            <div class="product-title">
-              0010-16392
-            </div>
-
-            <p><strong>OEM:</strong> AMAT</p>
-            <p><strong>Condition:</strong> Refurbished</p>
-
-            <button class="quote-btn">
-              Request Quote
-            </button>
-
-          </div>
-
-        </div>
+        <button class="quote-btn">
+          Request Quote
+        </button>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-  <footer class="footer">
-    © 2026 DMTech Semiconductor Parts Supply
-  </footer>
+</section>
 
-</div>
+<footer>
+  © 2026 DMTech Semiconductor Parts Supply
+</footer>
 
 </body>
 </html>
