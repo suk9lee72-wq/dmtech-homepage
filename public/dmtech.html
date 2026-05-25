@@ -1,574 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DMTech</title>
-
+<title>DMTech Semiconductor Parts</title>
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
+html{scroll-behavior:smooth;background:#0f172a;overflow-x:hidden}*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}body{overflow-x:hidden;overflow-y:scroll;background:#0f172a;color:#fff;padding-top:78px;min-height:100vh;width:100vw;margin:0;display:flex;flex-direction:column}header{position:fixed;top:0;left:0;z-index:1000;width:100vw;background:#020617;padding:18px 28px 14px;display:flex;flex-direction:column;gap:4px;box-shadow:0 10px 28px rgba(0,0,0,.28),0 2px 18px rgba(56,189,248,.14)}.header-top{display:flex;justify-content:space-between;align-items:center;width:100%}.logo{display:flex;align-items:center;cursor:pointer}.logo-image{height:30px}.logo-image img{height:100%;width:auto;display:block;object-fit:contain}.home-icon-btn{position:relative;color:#f8fafc;display:flex;align-items:center;justify-content:center;width:46px;height:46px;transition:.25s}.home-active{color:#7dd3fc!important;filter:drop-shadow(0 0 8px rgba(56,189,248,.55))}.home-active svg path{stroke:#7dd3fc;filter:drop-shadow(0 0 6px rgba(56,189,248,.7))}nav{display:flex;justify-content:center;gap:26px;width:100%;padding:4px 0;overflow:hidden}nav a{color:#e2e8f0;text-decoration:none;font-size:15px;font-weight:600;padding:0 18px;display:flex;align-items:center;justify-content:center;width:110px;height:40px;flex:0 0 110px;white-space:nowrap;border-radius:999px;transition:.25s;overflow:visible}.menu-active{background:linear-gradient(135deg,rgba(56,189,248,.34),rgba(96,165,250,.24))!important;color:#e0f2fe!important;border:1px solid rgba(125,211,252,.45)!important;box-shadow:0 0 0 1px rgba(56,189,248,.18),0 0 22px rgba(56,189,248,.24),inset 0 1px 0 rgba(255,255,255,.08);transform:translateY(-1px)}.header-search{margin-top:10px;width:100%}.search-box{position:relative;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 12px 26px rgba(0,0,0,.18)}.search-box input{width:100%;padding:16px 82px 16px 22px;border:0;font-size:17px;outline:0}.search-icon-btn{position:absolute;right:0;top:0;width:44px;height:100%;border:0;background:transparent}.hero{width:100vw;min-height:650px;padding:95px 40px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(rgba(2,6,23,.45),rgba(2,6,23,.72)),url('https://sitescdn.wearevennture.co.uk/public/mrl/mediahub/semiconductormanufacturinghd.jpeg') center/cover}.hero h1{font-size:64px;line-height:1.05;letter-spacing:-3px;max-width:760px}.hero p{font-size:24px;color:#e2e8f0;margin:18px 0 24px}.hero-action{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap}.hero-btn,.btn,.contact-page-btn{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#38bdf8,#60a5fa);color:#000;text-decoration:none;font-weight:700;border-radius:14px;padding:14px 22px}.hero-btn{width:240px;font-size:20px;padding:18px 28px}.support-badge{display:inline-flex;gap:10px;align-items:center;background:rgba(15,23,42,.72);border:1px solid rgba(148,163,184,.22);border-radius:999px;padding:13px 18px}.status-dot{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e}.section{width:100vw;background:#0f172a;padding:80px 60px}.main-sections-grid{display:flex;flex-direction:column;gap:90px}.section-title{font-size:42px;color:#f8fafc;letter-spacing:-2px;margin-bottom:12px}.repair-lead{color:#94a3b8;font-size:17px;line-height:1.7;margin-bottom:34px;max-width:760px}.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}.category-card{cursor:pointer;background:linear-gradient(180deg,rgba(15,23,42,.96),rgba(2,6,23,.92));padding:32px 22px;border-radius:10px;border:1px solid rgba(148,163,184,.18)}.category-card h3{font-size:22px;color:#f8fafc;margin-bottom:4px}.category-card p{color:#94a3b8;line-height:1.35}.about-page,.contact-page,.repair-page,.esc-page{width:100vw;display:none;background:radial-gradient(circle at 82% 6%,rgba(56,189,248,.24),transparent 24%),linear-gradient(180deg,#0f172a,#020617);background-attachment:fixed;padding:98px 60px 60px}.about-page,.contact-page{flex:1}.esc-page{background:radial-gradient(circle at 82% 6%,rgba(56,189,248,.24),transparent 24%),linear-gradient(180deg,#0f172a,#020617);background-attachment:fixed}.about-page h2,.contact-page h2{font-size:42px;margin-bottom:18px}.about-page p,.contact-lead{max-width:980px;color:#cbd5e1;font-size:18px;line-height:1.8;margin-bottom:22px}.repair-page{background:radial-gradient(circle at 85% 8%,rgba(56,189,248,.16),transparent 26%),linear-gradient(180deg,#0f172a,#020617);background-attachment:fixed}.repair-page-inner{max-width:1400px;margin:0 auto}.repair-page-hero{margin-bottom:80px;padding:4px 0 20px;overflow:visible}.repair-page-hero h2{font-size:58px;line-height:1.05;letter-spacing:-3px;margin-bottom:22px}.repair-page-hero p{max-width:900px;color:#cbd5e1;font-size:20px;line-height:1.8}.repair-badge{display:inline-flex;background:rgba(56,189,248,.12);color:#7dd3fc;border:1px solid rgba(56,189,248,.2);border-radius:999px;padding:10px 16px;font-size:13px;font-weight:700;margin:2px 0 20px 2px}.repair-block{margin-bottom:80px;padding:34px;border-radius:22px;background:rgba(15,23,42,.38);border:1px solid rgba(148,163,184,.08)}.repair-block>h3{display:flex;align-items:center;gap:14px;font-size:34px;margin-bottom:30px}.repair-block>h3:before{content:'';width:10px;height:10px;border-radius:50%;background:#38bdf8;box-shadow:0 0 18px rgba(56,189,248,.8)}.repair-block .category-card h3{font-size:19px}.repair-page .category-card{position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(180deg,rgba(15,23,42,.98),rgba(2,6,23,.94));box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 16px 36px rgba(0,0,0,.22)}.repair-page .category-card:before{content:'';position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,#38bdf8,transparent)}.turnaround-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.turnaround-grid .category-card{display:flex;flex-direction:column;justify-content:center}.turnaround-grid .category-card h3{margin-bottom:6px!important}.turnaround-grid .category-card p{margin-top:1px!important;line-height:1.22!important}.before-after-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.before-after-box{min-height:260px;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:24px;border-radius:20px;background:linear-gradient(135deg,rgba(15,23,42,.98),rgba(30,41,59,.75));border:1px dashed rgba(125,211,252,.32);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}.repair-cta{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:22px;flex-wrap:wrap;padding:40px;border-radius:18px;background:linear-gradient(135deg,rgba(30,41,59,.98),rgba(15,23,42,.96));border:1px solid rgba(148,163,184,.14);box-shadow:0 24px 60px rgba(0,0,0,.32),0 0 0 1px rgba(56,189,248,.08)}.repair-cta p{max-width:760px;color:#94a3b8;line-height:1.8;margin:0 auto}.repair-cta-icon{margin:0 auto 4px}.flow-infographic-block{background:linear-gradient(180deg,rgba(15,23,42,.72),rgba(2,6,23,.92));border:1px solid rgba(148,163,184,.12);box-shadow:0 24px 70px rgba(0,0,0,.28)}.flow-infographic-block>h3{justify-content:center;text-align:center}.repair-flow-infographic{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.flow-card{position:relative;min-height:245px;background:linear-gradient(180deg,rgba(15,23,42,.98),rgba(2,6,23,.94));border-radius:22px;padding:34px 18px 24px;text-align:center;border:1px solid rgba(148,163,184,.14);overflow:visible}.flow-card:before{content:'';position:absolute;inset:0;border-radius:22px;border:4px solid color-mix(in srgb,var(--flow-color) 55%, transparent);clip-path:polygon(0 0,100% 0,100% 34%,82% 34%,82% 100%,0 100%)}.flow-card:not(:last-child):after{content:'';position:absolute;right:-17px;top:50%;transform:translateY(-50%);border-top:15px solid transparent;border-bottom:15px solid transparent;border-left:16px solid color-mix(in srgb,var(--flow-color) 65%, transparent);z-index:2}.flow-number{width:34px;height:34px;margin:0 auto 20px;border-radius:999px;background:rgba(15,23,42,.92);border:1px solid color-mix(in srgb,var(--flow-color) 60%, transparent);display:flex;align-items:center;justify-content:center;color:color-mix(in srgb,var(--flow-color) 85%, #fff);font-weight:800;font-size:14px}.flow-card h3{font-size:17px!important;color:#f8fafc!important;margin-bottom:12px!important}.flow-card p{color:#94a3b8!important;font-size:13px;line-height:1.7}.flow-blue{--flow-color:#38bdf8}.flow-orange{--flow-color:#60a5fa}.flow-red{--flow-color:#0ea5e9}.flow-yellow{--flow-color:#7dd3fc}.flow-teal{--flow-color:#06b6d4}.contact-page-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:1000px;margin:0 auto}.contact-info-card{background:rgba(15,23,42,.92);border:1px solid rgba(148,163,184,.16);border-radius:14px;padding:30px}.contact-info-card p{color:#e2e8f0;font-size:17px;line-height:1.6;margin-bottom:12px}.contact-info-card span{color:#94a3b8}.esc-page{padding:0 60px 30px}.esc-hero{position:sticky;top:170px;z-index:50;margin:0 -60px -14px;padding:0 60px 2px;background:transparent;border-bottom:0}.esc-filters{display:flex;gap:14px;align-items:center;flex-wrap:wrap;transform:translateY(-18px)}.parts-title-row{width:100%;display:flex;justify-content:space-between;align-items:center}.parts-count{transform:translateY(10px);color:#94a3b8;font-weight:700;padding:10px 14px;border:1px solid rgba(148,163,184,.18);border-radius:999px;background:rgba(15,23,42,.72)}.parts-title-select{position:relative}.parts-title-button{background:transparent;border:0;color:#f8fafc;font-size:34px;font-weight:800;letter-spacing:-2px;cursor:pointer}.parts-title-button span{color:#f8fafc}.parts-title-button span:last-child{color:#60a5fa}.parts-dropdown{display:none;position:absolute;top:52px;left:0;min-width:260px;background:#020617;border:1px solid rgba(148,163,184,.18);border-radius:12px;padding:10px;z-index:20}.parts-dropdown.active{display:block}.parts-dropdown button{width:100%;background:transparent;border:0;color:#cbd5e1;text-align:left;padding:12px 14px;border-radius:8px}.filter-select{min-width:160px;height:44px;background:#1e293b;color:#f8fafc;border:1px solid rgba(148,163,184,.22);border-radius:10px;padding:0 14px;transition:.25s}.filter-select.filter-active{background:linear-gradient(135deg,rgba(56,189,248,.18),rgba(96,165,250,.12));color:#e0f2fe;border:1px solid rgba(125,211,252,.45)!important;box-shadow:inset 0 0 0 1px rgba(56,189,248,.18),inset 0 1px 0 rgba(255,255,255,.08)}.filter-select.filter-active option{color:#111827;background:#fff}.esc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-top:168px}.product-card{position:relative;background:linear-gradient(180deg,rgba(15,23,42,.98),rgba(2,6,23,.94));border-radius:18px;overflow:hidden;border:1px solid rgba(148,163,184,.18);box-shadow:inset 0 1px 0 rgba(255,255,255,.04),0 16px 36px rgba(0,0,0,.22)}.product-card:before{content:'';position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,#38bdf8,transparent);z-index:2}.product-image{height:220px;display:flex;align-items:center;justify-content:center;background:#fff;padding:18px;border-bottom:1px solid rgba(148,163,184,.12)}.product-image img{max-width:100%;max-height:100%;object-fit:contain}.product-info{padding:28px 24px 24px;color:#cbd5e1}.product-info h3{color:#f8fafc;margin-bottom:14px}.product-info p:last-of-type{margin-bottom:18px}.product-info .btn{margin-top:4px}.pagination{display:flex;justify-content:center;gap:10px;margin:34px 0 40px}.pagination button{min-width:40px;height:40px;border-radius:10px;border:1px solid rgba(148,163,184,.18);background:#0f172a;color:#cbd5e1}.pagination .active{background:linear-gradient(135deg,rgba(56,189,248,.34),rgba(96,165,250,.24));color:#e0f2fe;border:1px solid rgba(125,211,252,.45)!important;box-shadow:0 0 0 1px rgba(56,189,248,.18),0 0 22px rgba(56,189,248,.24),inset 0 1px 0 rgba(255,255,255,.08);transform:translateY(-1px)}.contact{width:100vw;background:radial-gradient(circle at top,rgba(56,189,248,.1),transparent 35%),linear-gradient(135deg,#020617,#0f172a);text-align:center;padding:50px 40px 60px}.quote-agent-icon{width:84px;height:84px;margin:0 auto 22px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:rgba(15,23,42,.72);border:1px solid rgba(56,189,248,.22);box-shadow:0 0 0 8px rgba(56,189,248,.04),0 0 18px rgba(56,189,248,.18);animation:quoteGlow 2.8s ease-in-out infinite}@keyframes quoteGlow{50%{box-shadow:0 0 0 12px rgba(56,189,248,.05),0 0 30px rgba(56,189,248,.42)}}.quote-lead{text-align:center;margin-left:auto;margin-right:auto}.quote-form-wrapper{max-width:900px;margin:50px auto 0;background:linear-gradient(180deg,rgba(15,23,42,.96),rgba(2,6,23,.96));border:1px solid rgba(148,163,184,.12);border-radius:14px;padding:40px;text-align:left}.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}.quote-field{display:flex;flex-direction:column;gap:10px}.quote-field label{color:#e2e8f0;font-size:14px;font-weight:600}.quote-field input,.quote-field textarea{width:100%;background:#020617;border:1px solid rgba(148,163,184,.15);border-radius:10px;padding:14px 16px;color:white;font-size:15px;outline:0}.quote-field textarea{min-height:140px}.quote-submit{margin-top:10px;width:100%;border:0;background:linear-gradient(135deg,#38bdf8,#60a5fa);color:black;padding:16px;border-radius:10px;font-size:17px;font-weight:700}.form-result{margin-top:14px;font-size:14px;color:#94a3b8;text-align:center}.form-result.success{color:#22c55e}.form-result.error{color:#f87171}footer{width:100vw;margin-top:auto;background:linear-gradient(180deg,#f8fafc,#e2e8f0);padding:50px 40px 40px;color:#334155;position:relative;bottom:0}.footer-container{max-width:1200px;margin:0 auto}.footer-company h3{font-size:28px;color:#0f172a;margin-bottom:10px}.footer-company p{color:#475569;margin-bottom:35px}.footer-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-bottom:40px}.footer-copy{padding-top:25px;border-top:1px solid rgba(148,163,184,.16);text-align:center;color:#64748b}@media(min-width:769px){body{padding-top:82px}header{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:'logo nav home' 'search search search';align-items:end;gap:8px 18px;padding:14px 28px}.header-top{display:contents}.logo{grid-area:logo;align-self:end;transform:translateY(-6px)}.home-icon-btn{grid-area:home;justify-self:end;align-self:center;transform:translateY(6px)}nav{grid-area:nav;padding:18px 0 2px;align-self:end;justify-content:center;gap:clamp(8px,2vw,26px);min-width:0;overflow:visible}.header-search{grid-area:search;margin-top:4px}.esc-hero{top:135px}}@media(min-width:769px) and (max-width:1100px){nav{gap:6px}nav a{width:96px;flex:0 1 96px;padding:0 10px;font-size:14px}}@media(min-width:1200px){header{padding-left:calc((100vw - 1200px)/2 + 28px);padding-right:calc((100vw - 1200px)/2 + 28px)}.hero{padding-left:calc((100vw - 1200px)/2 + 40px);padding-right:calc((100vw - 1200px)/2 + 40px)}.section{padding-left:calc((100vw - 1200px)/2 + 60px);padding-right:calc((100vw - 1200px)/2 + 60px)}.about-page,.contact-page,.repair-page{padding-left:calc((100vw - 1200px)/2 + 60px);padding-right:calc((100vw - 1200px)/2 + 60px)}.contact{padding-left:calc((100vw - 1200px)/2 + 40px);padding-right:calc((100vw - 1200px)/2 + 40px)}footer{padding-left:calc((100vw - 1200px)/2 + 40px);padding-right:calc((100vw - 1200px)/2 + 40px)}.esc-page{padding-left:calc((100vw - 1200px)/2 + 60px);padding-right:calc((100vw - 1200px)/2 + 60px)}.esc-hero{margin-left:calc(-1 * ((100vw - 1200px)/2 + 60px));margin-right:calc(-1 * ((100vw - 1200px)/2 + 60px));padding-left:calc((100vw - 1200px)/2 + 60px);padding-right:calc((100vw - 1200px)/2 + 60px)}}@media(max-width:1024px){.repair-flow-infographic{grid-template-columns:repeat(2,1fr)}.flow-card:not(:last-child):after{display:none}}@media(max-width:768px){body{padding-top:165px}header{padding:8px 32px 10px 24px}.logo-image{height:28px}.home-icon-btn{transform:translateY(5px)}.header-search{margin-top:6px}nav{overflow:hidden;gap:8px;margin-top:-6px;padding:10px 0}nav a{flex:1;padding:9px 8px;border:1px solid rgba(148,163,184,.18);background:rgba(30,41,59,.9);border-radius:999px;font-size:14px;text-align:center}.hero{min-height:520px;padding:48px 24px 40px}.hero h1{font-size:36px}.hero-action{flex-direction:column}.section{padding:50px 36px 50px 28px}.categories{grid-template-columns:1fr 1fr;gap:12px}.category-card{padding:22px 14px}.category-card h3{font-size:16px}.about-page,.contact-page,.repair-page{padding:48px 36px 50px 28px}.contact-page-grid,.quote-grid,.before-after-grid{grid-template-columns:1fr}.quote-form-wrapper{padding:28px}.esc-page{padding:0 36px 45px 28px}.esc-hero{top:165px;margin:0 -36px -10px -28px;padding:0 36px 2px 28px;background:transparent}.esc-grid{grid-template-columns:1fr;padding-top:118px}.parts-title-button{font-size:26px}.parts-count{transform:translateY(8px);font-size:13px;padding:0;border:0;background:transparent}.filter-select{min-width:calc(50% - 5px);flex:1;height:40px;font-size:13px}.esc-filters{transform:translateY(-12px)}.repair-page-hero h2{font-size:38px}.repair-block h3{font-size:28px}.repair-block{padding:22px}.repair-cta{padding:28px}.repair-flow-infographic{grid-template-columns:1fr;gap:34px}.flow-card{min-height:auto}.flow-card:before{clip-path:none}.flow-infographic-block>h3{text-align:left;justify-content:flex-start}.flow-card:not(:last-child):after{display:block;right:auto;left:50%;top:auto;bottom:-26px;transform:translateX(-50%);border-left:13px solid transparent;border-right:13px solid transparent;border-top:18px solid var(--flow-color);border-bottom:0}}
+.esc-page .esc-hero{padding-top:0!important;padding-bottom:0!important;margin-bottom:-18px!important}.esc-page .esc-grid{padding-top:182px!important}@media(max-width:768px){.esc-page .esc-hero{top:118px!important;padding-top:0!important;padding-bottom:0!important;margin-bottom:-46px!important}.esc-page .esc-filters{transform:translateY(-72px)!important}.esc-page .esc-grid{padding-top:166px!important}}
+
+
+/* =========================================================
+   DMTech Manufacturing Style Override
+   - Original layout / HTML / JavaScript preserved
+   - Visual style only changed to clean manufacturing tone
+========================================================= */
+:root{
+  --dm-bg:#f5f7f8;
+  --dm-white:#ffffff;
+  --dm-panel:#ffffff;
+  --dm-panel-soft:#f8fafb;
+  --dm-text:#17212b;
+  --dm-sub:#667085;
+  --dm-muted:#8a98a8;
+  --dm-line:#d9e1e7;
+  --dm-blue:#0077a3;
+  --dm-blue-dark:#005f82;
+  --dm-green:#6d9a45;
+  --dm-yellow:#fcb316;
+  --dm-dark:#17212b;
+  --dm-footer:#111820;
 }
 
-html,body{
-  background:#f5f7f8;
-  color:#17212b;
-  overflow-x:hidden;
-}
+html{background:var(--dm-bg)!important;scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--dm-bg)!important;color:var(--dm-text)!important}
 
-body{
-  padding-top:88px;
-}
-
+/* Header */
 header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid #d9e1e7;
+  background:rgba(255,255,255,.96)!important;
+  border-bottom:1px solid var(--dm-line)!important;
+  box-shadow:0 6px 22px rgba(15,23,42,.07)!important;
   backdrop-filter:blur(10px);
 }
-
-.header-inner{
-  max-width:1400px;
-  margin:0 auto;
-  height:88px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 28px;
-}
-
-.logo img{
-  height:36px;
-}
-
-nav{
-  display:flex;
-  gap:34px;
-}
-
+.logo-image{height:34px!important}
+.home-icon-btn{color:#26323f!important}
+.home-active{color:var(--dm-blue)!important;filter:none!important}
+.home-active svg path{stroke:var(--dm-blue)!important;filter:none!important}
 nav a{
-  text-decoration:none;
-  color:#26323f;
-  font-size:14px;
-  font-weight:700;
+  color:#26323f!important;
+  background:transparent!important;
+  border-radius:4px!important;
+  font-size:14px!important;
+  font-weight:700!important;
 }
-
-nav a:hover{
-  color:#0077a3;
+nav a:hover{color:var(--dm-blue)!important;background:#eef6fa!important}
+.menu-active{
+  background:#eef6fa!important;
+  color:var(--dm-blue)!important;
+  border:1px solid rgba(0,119,163,.18)!important;
+  box-shadow:none!important;
+  transform:none!important;
 }
-
-.rfq-btn{
-  background:#0077a3;
-  color:white;
-  border:none;
-  border-radius:4px;
-  padding:13px 22px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.hero{
-  background:white;
-  border-bottom:1px solid #d9e1e7;
-}
-
-.hero-top-line{
-  height:3px;
-  background:linear-gradient(
-    to right,
-    #fcb316,
-    #6d9a45,
-    #0077a3
-  );
-}
-
-.hero-inner{
-  max-width:1400px;
-  margin:0 auto;
-  padding:90px 28px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:60px;
-  align-items:center;
-}
-
-.hero-tag{
-  display:inline-flex;
-  border:1px solid #d9e1e7;
-  background:#f5f7f8;
-  padding:10px 16px;
-  font-size:12px;
-  font-weight:700;
-  color:#667085;
-  border-radius:4px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.hero h1{
-  margin-top:24px;
-  font-size:72px;
-  line-height:1.03;
-  letter-spacing:-4px;
-}
-
-.hero p{
-  margin-top:26px;
-  color:#667085;
-  font-size:18px;
-  line-height:1.8;
-  max-width:720px;
-}
-
 .search-box{
-  margin-top:34px;
-  display:flex;
-  overflow:hidden;
-  border:1px solid #d9e1e7;
-  border-radius:4px;
-  background:white;
-  box-shadow:0 10px 26px rgba(15,23,42,.06);
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:4px!important;
+  box-shadow:0 8px 24px rgba(15,23,42,.06)!important;
 }
+.search-box input{color:var(--dm-text)!important;font-size:16px!important}
+.search-icon-btn{background:var(--dm-blue)!important;width:56px!important}
+.search-icon-btn svg circle,.search-icon-btn svg path{stroke:#fff!important}
 
-.search-box input{
-  flex:1;
-  border:none;
-  padding:18px 20px;
-  font-size:15px;
-  outline:none;
+/* Home Hero - same placement, cleaner manufacturing look */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.94),rgba(245,247,248,.88)),
+    url('https://sitescdn.wearevennture.co.uk/public/mrl/mediahub/semiconductormanufacturinghd.jpeg') center/cover!important;
+  color:var(--dm-text)!important;
+  border-bottom:1px solid var(--dm-line)!important;
+  position:relative;
 }
-
-.search-box button{
-  border:none;
-  background:#0077a3;
-  color:white;
-  padding:0 26px;
-  font-weight:700;
+.hero:before{
+  content:'';
+  position:absolute;
+  left:0;top:0;width:100%;height:3px;
+  background:linear-gradient(90deg,var(--dm-yellow),var(--dm-green),var(--dm-blue));
 }
-
-.hero-buttons{
-  margin-top:22px;
-  display:flex;
-  gap:14px;
+.hero h1{color:var(--dm-text)!important;font-weight:800!important;letter-spacing:-4px!important}
+.hero p{color:var(--dm-sub)!important}
+.hero-btn,.btn,.contact-page-btn{
+  background:var(--dm-blue)!important;
+  color:#fff!important;
+  border:1px solid var(--dm-blue)!important;
+  border-radius:4px!important;
+  box-shadow:none!important;
 }
-
-.primary-btn{
-  background:#0077a3;
-  color:white;
-  border:none;
-  padding:15px 24px;
-  border-radius:4px;
-  font-weight:700;
+.hero-btn:hover,.btn:hover,.contact-page-btn:hover,.quote-submit:hover{background:var(--dm-blue-dark)!important}
+.support-badge{
+  background:#fff!important;
+  color:#26323f!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:4px!important;
+  box-shadow:0 8px 22px rgba(15,23,42,.06)!important;
 }
+.status-dot{background:var(--dm-green)!important;box-shadow:0 0 0 4px rgba(109,154,69,.13)!important}
 
-.secondary-btn{
-  background:white;
-  color:#0077a3;
-  border:1px solid #0077a3;
-  padding:15px 24px;
-  border-radius:4px;
-  font-weight:700;
+/* Main sections */
+.section{background:var(--dm-bg)!important;color:var(--dm-text)!important}
+.section-title,.repair-title{color:var(--dm-text)!important;font-weight:800!important;letter-spacing:-2px!important}
+.repair-lead{color:var(--dm-sub)!important}
+.main-sections-grid{gap:90px!important}
+.categories{gap:20px!important}
+.category-card{
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:6px!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
+  color:var(--dm-text)!important;
+  transition:.2s!important;
 }
+.category-card:hover{transform:translateY(-3px)!important;border-color:rgba(0,119,163,.32)!important;box-shadow:0 16px 34px rgba(15,23,42,.08)!important}
+.category-card h3{color:var(--dm-text)!important;font-weight:800!important}
+.category-card p{color:var(--dm-sub)!important}
 
-.hero-image{
-  border:1px solid #d9e1e7;
-  padding:12px;
-  border-radius:6px;
-  background:#f5f7f8;
-  box-shadow:0 14px 34px rgba(15,23,42,.08);
+/* Sub pages keep original layout, only restyled */
+.about-page,.contact-page,.repair-page,.esc-page{
+  background:var(--dm-bg)!important;
+  color:var(--dm-text)!important;
+  background-attachment:initial!important;
 }
-
-.hero-image img{
-  width:100%;
-  height:440px;
-  object-fit:cover;
-  border-radius:4px;
+.about-page h2,.contact-page h2,.repair-page-hero h2{color:var(--dm-text)!important;font-weight:800!important}
+.about-page p,.contact-lead,.repair-page-hero p{color:var(--dm-sub)!important}
+.repair-badge{
+  background:#eef6fa!important;
+  color:var(--dm-blue)!important;
+  border:1px solid rgba(0,119,163,.18)!important;
+  border-radius:4px!important;
 }
-
-.section{
-  max-width:1400px;
-  margin:0 auto;
-  padding:90px 28px;
+.repair-block{
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:8px!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
 }
-
-.section-top{
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  margin-bottom:48px;
+.repair-block>h3{color:var(--dm-text)!important}
+.repair-block>h3:before{background:var(--dm-blue)!important;box-shadow:none!important;border-radius:2px!important}
+.repair-page .category-card{
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:6px!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
 }
-
-.section-label{
-  color:#0077a3;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  margin-bottom:14px;
+.repair-page .category-card:before,.product-card:before{background:linear-gradient(90deg,var(--dm-yellow),var(--dm-green),var(--dm-blue))!important;height:3px!important}
+.before-after-box{
+  background:var(--dm-panel-soft)!important;
+  border:1px dashed rgba(0,119,163,.32)!important;
+  color:var(--dm-muted)!important;
+  border-radius:8px!important;
 }
-
-.section h2{
-  font-size:48px;
-  letter-spacing:-3px;
+.repair-cta{
+  background:var(--dm-dark)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  border-radius:8px!important;
+  box-shadow:0 18px 42px rgba(15,23,42,.16)!important;
 }
-
-.section-desc{
-  max-width:420px;
-  color:#667085;
-  line-height:1.8;
+.repair-cta h3{color:#fff!important}
+.repair-cta p{color:#cbd5df!important}
+.quote-agent-icon{
+  background:#fff!important;
+  border:1px solid var(--dm-line)!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.07)!important;
+  animation:none!important;
 }
+.quote-agent-icon svg path{stroke:var(--dm-blue)!important}
 
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+/* Repair flow */
+.flow-infographic-block{background:var(--dm-white)!important;border:1px solid var(--dm-line)!important;box-shadow:0 10px 26px rgba(15,23,42,.05)!important}
+.flow-card{
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:8px!important;
+  box-shadow:0 10px 22px rgba(15,23,42,.04)!important;
 }
+.flow-card:before{border-color:rgba(0,119,163,.28)!important}
+.flow-card:not(:last-child):after{border-left-color:rgba(0,119,163,.42)!important}
+.flow-number{background:#eef6fa!important;color:var(--dm-blue)!important;border:1px solid rgba(0,119,163,.22)!important}
+.flow-card h3{color:var(--dm-text)!important}
+.flow-card p{color:var(--dm-sub)!important}
 
+/* Product page */
+.esc-hero{background:transparent!important}
+.parts-title-button,.parts-title-button span{color:var(--dm-text)!important}
+.parts-title-button span:last-child{color:var(--dm-blue)!important}
+.parts-count{
+  color:var(--dm-sub)!important;
+  border:1px solid var(--dm-line)!important;
+  background:#fff!important;
+  border-radius:4px!important;
+}
+.parts-dropdown{background:#fff!important;border:1px solid var(--dm-line)!important;border-radius:6px!important;box-shadow:0 12px 30px rgba(15,23,42,.12)!important}
+.parts-dropdown button{color:var(--dm-text)!important}
+.parts-dropdown button:hover{background:#eef6fa!important;color:var(--dm-blue)!important}
+.filter-select{
+  background:#fff!important;
+  color:var(--dm-text)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:4px!important;
+}
+.filter-select.filter-active{
+  background:#eef6fa!important;
+  color:var(--dm-blue)!important;
+  border:1px solid rgba(0,119,163,.32)!important;
+  box-shadow:none!important;
+}
 .product-card{
-  background:white;
-  border:1px solid #d9e1e7;
-  border-radius:6px;
-  padding:28px;
-  box-shadow:0 10px 24px rgba(15,23,42,.05);
-  transition:.2s;
+  background:var(--dm-white)!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:6px!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
+}
+.product-image{background:#fff!important;border-bottom:1px solid var(--dm-line)!important}
+.product-info{color:var(--dm-sub)!important}
+.product-info h3{color:var(--dm-text)!important}
+.pagination button{background:#fff!important;color:var(--dm-text)!important;border:1px solid var(--dm-line)!important;border-radius:4px!important}
+.pagination .active{background:var(--dm-blue)!important;color:#fff!important;border-color:var(--dm-blue)!important;box-shadow:none!important;transform:none!important}
+
+/* Contact page */
+.contact-info-card{
+  background:#fff!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:6px!important;
+  box-shadow:0 10px 26px rgba(15,23,42,.05)!important;
+}
+.contact-info-card p{color:var(--dm-text)!important}
+.contact-info-card span{color:var(--dm-sub)!important}
+
+/* RFQ section */
+.contact{
+  background:var(--dm-dark)!important;
+  color:#fff!important;
+}
+.contact .repair-title{color:#fff!important}
+.contact .repair-lead{color:#cbd5df!important}
+.quote-form-wrapper{
+  background:#fff!important;
+  border:1px solid var(--dm-line)!important;
+  border-radius:6px!important;
+  box-shadow:0 18px 42px rgba(0,0,0,.16)!important;
+}
+.quote-field label{color:var(--dm-text)!important}
+.quote-field input,.quote-field textarea{
+  background:#fff!important;
+  border:1px solid var(--dm-line)!important;
+  color:var(--dm-text)!important;
+  border-radius:4px!important;
+}
+.quote-field input:focus,.quote-field textarea:focus{border-color:var(--dm-blue)!important}
+.quote-submit{background:var(--dm-blue)!important;color:#fff!important;border-radius:4px!important}
+
+/* Footer */
+footer{background:var(--dm-footer)!important;color:#cbd5df!important}
+.footer-company h3{color:#fff!important}
+.footer-company p,.footer-info p,.footer-copy{color:#cbd5df!important}
+.footer-copy{border-top:1px solid rgba(255,255,255,.1)!important}
+
+@media(max-width:768px){
+  header{background:rgba(255,255,255,.97)!important}
+  nav a{background:#fff!important;border:1px solid var(--dm-line)!important;color:#26323f!important}
+  .hero h1{font-size:36px!important;letter-spacing:-2px!important}
+  .section{background:var(--dm-bg)!important}
+  .flow-card:not(:last-child):after{border-top-color:var(--dm-blue)!important;border-left-color:transparent!important}
 }
 
-.product-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(0,119,163,.3);
-}
-
-.product-icon{
-  width:44px;
-  height:44px;
-  border-radius:4px;
-  background:#eef6fa;
-  margin-bottom:22px;
-}
-
-.product-card h3{
-  font-size:21px;
-}
-
-.product-card p{
-  margin-top:14px;
-  color:#667085;
-  line-height:1.8;
-}
-
-.rfq-section{
-  background:#17212b;
-  color:white;
-  padding:90px 28px;
-}
-
-.rfq-inner{
-  max-width:1400px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:60px;
-}
-
-.rfq-section p{
-  color:#cbd5df;
-  line-height:1.8;
-}
-
-.rfq-form{
-  background:white;
-  color:#17212b;
-  padding:28px;
-  border-radius:6px;
-}
-
-.rfq-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-}
-
-.rfq-form input,
-.rfq-form textarea{
-  width:100%;
-  border:1px solid #d9e1e7;
-  border-radius:4px;
-  padding:14px;
-  outline:none;
-}
-
-.rfq-form textarea{
-  height:140px;
-  margin-top:14px;
-}
-
-.rfq-submit{
-  width:100%;
-  margin-top:14px;
-  background:#0077a3;
-  color:white;
-  border:none;
-  padding:16px;
-  border-radius:4px;
-  font-weight:700;
-}
-
-footer{
-  background:#111820;
-  color:#cbd5df;
-  padding:30px 28px;
-}
-
-.footer-inner{
-  max-width:1400px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-}
-
-@media(max-width:900px){
-
-.hero-inner,
-.rfq-inner,
-.section-top{
-  grid-template-columns:1fr;
-  display:grid;
-}
-
-.product-grid{
-  grid-template-columns:1fr;
-}
-
-.hero h1{
-  font-size:48px;
-}
-
-nav{
-  display:none;
-}
-
-.rfq-grid{
-  grid-template-columns:1fr;
-}
-
-}
 </style>
 </head>
-
 <body>
-
-<header>
-  <div class="header-inner">
-
-    <div class="logo">
-      <img src="https://github.com/suk9lee72-wq/dmtech-homepage/blob/main/public/logo.png?raw=true">
-    </div>
-
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Products</a>
-      <a href="#">Industries</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-
-    <button class="rfq-btn">
-      RFQ
-    </button>
-
-  </div>
-</header>
-
-<section class="hero">
-
-  <div class="hero-top-line"></div>
-
-  <div class="hero-inner">
-
-    <div>
-
-      <div class="hero-tag">
-        Semiconductor Parts Sourcing
-      </div>
-
-      <h1>
-        Semiconductor Parts Sourcing
-      </h1>
-
-      <p>
-        DMTech supports sourcing for semiconductor equipment parts,
-        ESC, chamber parts, vacuum systems, RF components,
-        quartz parts, and industrial materials.
-      </p>
-
-      <div class="search-box">
-        <input
-          type="text"
-          placeholder="Search products or part number"
-        >
-
-        <button>
-          Search
-        </button>
-      </div>
-
-      <div class="hero-buttons">
-
-        <button class="primary-btn">
-          View Products
-        </button>
-
-        <button class="secondary-btn">
-          Request Quote
-        </button>
-
-      </div>
-
-    </div>
-
-    <div class="hero-image">
-
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600&auto=format&fit=crop">
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="section">
-
-  <div class="section-top">
-
-    <div>
-      <div class="section-label">
-        Products
-      </div>
-
-      <h2>
-        Product Categories
-      </h2>
-    </div>
-
-    <div class="section-desc">
-      Industrial semiconductor parts sourcing with a cleaner
-      manufacturing-focused visual style.
-    </div>
-
-  </div>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>ESC</h3>
-      <p>Electrostatic chuck sourcing and support.</p>
-    </div>
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>Chamber Parts</h3>
-      <p>Semiconductor chamber component sourcing.</p>
-    </div>
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>Vacuum Components</h3>
-      <p>Vacuum system and process support parts.</p>
-    </div>
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>RF Components</h3>
-      <p>RF process and plasma related parts sourcing.</p>
-    </div>
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>Quartz Parts</h3>
-      <p>Quartz consumables and process support.</p>
-    </div>
-
-    <div class="product-card">
-      <div class="product-icon"></div>
-      <h3>Industrial Materials</h3>
-      <p>Manufacturing materials and sourcing support.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="rfq-section">
-
-  <div class="rfq-inner">
-
-    <div>
-
-      <div class="section-label" style="color:#fcb316">
-        Request Quote
-      </div>
-
-      <h2 style="font-size:48px;letter-spacing:-3px">
-        Send us your RFQ
-      </h2>
-
-      <p style="margin-top:20px">
-        Please include manufacturer, part number,
-        condition, quantity, and delivery schedule.
-      </p>
-
-    </div>
-
-    <div class="rfq-form">
-
-      <div class="rfq-grid">
-
-        <input placeholder="Name / Company">
-        <input placeholder="Email">
-
-      </div>
-
-      <input
-        style="margin-top:14px"
-        placeholder="Part Number"
-      >
-
-      <textarea placeholder="Message"></textarea>
-
-      <button class="rfq-submit">
-        Request Quote
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <div class="footer-inner">
-
-    <div>
-      © DMTech Semiconductor Parts
-    </div>
-
-    <div>
-      OEM · Refurbished · Second Source
-    </div>
-
-  </div>
-
-</footer>
-
+<header><div class="header-top"><div class="logo logo-image" onclick="showHomePage()"><img src="https://github.com/suk9lee72-wq/dmtech-homepage/blob/main/public/logo.png?raw=true" alt="DMTech Logo"></div><a href="#" class="home-icon-btn" onclick="showHomePage();return false" aria-label="Home"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5L12 3L21 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 9.5V20H19V9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><nav id="topMenu"><a href="#" onclick="showESCPage();return false">Products</a><a href="#" onclick="showRepairPage();return false">Repair</a><a href="#" onclick="showAboutPage();return false">About</a><a href="#" onclick="showContactPage();return false">Contact</a></nav><div class="header-search"><div class="search-box"><input type="text" placeholder="Request Quote Part Number..."/><button class="search-icon-btn" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="#111827" stroke-width="2.2"/><path d="M20 20L16.65 16.65" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/></svg></button></div></div></header>
+<section class="about-page" id="aboutPage"><h2>About DMTech</h2><p>DMTech specializes in sourcing semiconductor equipment parts including OEM, refurbished, and second source components for global semiconductor fabs and suppliers.</p><p>We support fast RFQ response, hard-to-find parts sourcing, vacuum components, ceramic parts, ESCs, shower heads, RF parts, and semiconductor consumables.</p><p>Our goal is to provide reliable sourcing solutions with rapid communication, global supplier networks, and practical field experience in semiconductor supply chains.</p></section>
+<section class="repair-page" id="repairPage"><div class="repair-page-inner"><div class="repair-page-hero"><span class="repair-badge">Professional Semiconductor Repair Support</span><h2>Repair & Refurbishment Services</h2><p>DMTech supports repair, refurbishment, cleaning, inspection, and sourcing coordination for semiconductor equipment parts including ESC, ceramic, shower head, vacuum, and RF components.</p></div><div class="repair-block"><h3>Repairable Parts</h3><div class="categories"><div class="category-card"><h3>ESC</h3><p>Electrostatic chuck repair, cleaning, and inspection support.</p></div><div class="category-card"><h3>Ceramic</h3><p>Ceramic part cleaning, crack inspection, and polishing support.</p></div><div class="category-card"><h3>Shower Head</h3><p>Hole cleaning, contamination removal, and surface inspection.</p></div><div class="category-card"><h3>Vacuum Parts</h3><p>Vacuum cleaning, leak test, seal inspection, and refurbishment support.</p></div></div></div><div class="repair-block flow-infographic-block"><h3>Common Repair Flow</h3><div class="repair-flow-infographic"><div class="flow-card flow-blue"><div class="flow-number">01</div><h3>Incoming Inspection</h3><p>Visual inspection, contamination check, and condition verification.</p></div><div class="flow-card flow-orange"><div class="flow-number">02</div><h3>Analysis & Quotation</h3><p>Repair feasibility review, scope confirmation, and lead time estimation.</p></div><div class="flow-card flow-red"><div class="flow-number">03</div><h3>Repair / Cleaning</h3><p>Cleaning, polishing, surface restoration, and repair coordination.</p></div><div class="flow-card flow-yellow"><div class="flow-number">04</div><h3>Final QC</h3><p>Outgoing inspection, dimensional check, leak test, and QC review.</p></div><div class="flow-card flow-teal"><div class="flow-number">05</div><h3>Shipment</h3><p>Packaging support and domestic or international shipment handling.</p></div></div></div><div class="repair-block"><h3>Key Inspection Points by Part</h3><div class="categories"><div class="category-card"><h3>ESC</h3><p>Chucking force, flatness, surface condition, dielectric condition, and contamination.</p></div><div class="category-card"><h3>Ceramic</h3><p>Crack inspection, surface contamination, chipping, polishing condition, and visual QC.</p></div><div class="category-card"><h3>Shower Head</h3><p>Hole blockage, surface condition, cleaning status, flatness, and contamination.</p></div><div class="category-card"><h3>Vacuum Parts</h3><p>Leak test, sealing area condition, vacuum cleanliness, and surface damage.</p></div></div></div><div class="repair-block"><h3>Turnaround Time</h3><div class="turnaround-grid"><div class="category-card"><h3>Inspection Only</h3><p>🕒 Approx. 3 ~ 5 Business Days</p></div><div class="category-card"><h3>Standard Repair</h3><p>🕒 Approx. 2 ~ 4 Weeks</p></div><div class="category-card"><h3>Complex Refurbishment</h3><p>🕒 Approx. 4 ~ 8 Weeks</p></div></div></div><div class="repair-block"><h3>Before / After</h3><div class="before-after-grid"><div class="before-after-box">Before Image</div><div class="before-after-box">After Image</div></div></div><div class="repair-cta"><div class="quote-agent-icon repair-cta-icon"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14C14.7614 14 17 11.7614 17 9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9C7 11.7614 9.23858 14 12 14Z" stroke="#38bdf8" stroke-width="1.8"/><path d="M4 20C4.8 17.2 7.4 15.5 12 15.5C16.6 15.5 19.2 17.2 20 20" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/><path d="M19 8V12" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/><path d="M21 10H17" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>Need Repair Support?</h3><p>Send us your part number, issue details, quantity, and photos if available for fast inspection and quotation support.</p></div><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="hero-btn">Request RFQ</a></div></div></section>
+<section class="contact-page" id="contactPage"><h2>Contact</h2><p class="contact-lead">Connect with DMTech for RFQ, sourcing requests, and semiconductor parts support.</p><div class="contact-page-grid"><div class="contact-info-card"><p><span class="contact-inline-icon">📄</span> Send us your part number, quantity, condition, and manufacturer requirements.</p><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="contact-page-btn">Request Quote</a></div><div class="contact-info-card"><p><span class="contact-inline-icon">✉️</span> sales@dmtech.co.kr</p><span>For RFQ, sourcing requests, and supplier communication.</span></div><div class="contact-info-card"><p><span class="contact-inline-icon">📞</span> +82-31-000-0000</p><span>Available for business inquiries and urgent sourcing support.</span></div><div class="contact-info-card"><p><span class="contact-inline-icon">🌍</span> Gyeonggi-do, Republic of Korea</p><span>Supporting semiconductor parts sourcing for domestic and global customers.</span></div></div></section>
+<section class="esc-page" id="escPage"><div class="esc-hero"><div class="esc-filters"><div class="parts-title-row"><div class="parts-title-select"><button class="parts-title-button" onclick="togglePartsDropdown(event)"><span id="partsTitleText">ESC Parts</span> <span>▾</span></button><div class="parts-dropdown" id="partsDropdown"><button onclick="showProductPage('ESC Parts',482);closePartsDropdown()">ESC Parts</button><button onclick="showProductPage('Ceramic Parts',218);closePartsDropdown()">Ceramic Parts</button><button onclick="showProductPage('Vacuum Parts',731);closePartsDropdown()">Vacuum Parts</button><button onclick="showProductPage('Shower Head',164);closePartsDropdown()">Shower Head</button><button onclick="showProductPage('Edge Ring',95);closePartsDropdown()">Edge Ring</button><button onclick="showProductPage('RF Parts',356);closePartsDropdown()">RF Parts</button></div></div><div class="parts-count" id="partsCount">482 Parts</div></div><select class="filter-select" id="manufacturerFilter" onchange="updatePartsCount()"><option value="" selected hidden>Manufacturer</option><option>AMAT</option><option>TEL</option><option>LAM Research</option><option>MKS Instruments</option></select><select class="filter-select" id="sourceFilter" onchange="updatePartsCount()"><option value="" selected hidden>Source Type</option><option>OEM</option><option>2nd Source</option><option>Refurbished</option><option>Used</option></select><select class="filter-select" id="conditionFilter" onchange="updatePartsCount()"><option value="" selected hidden>Condition</option><option>New</option><option>Used</option><option>Refurbished</option><option>Repair Available</option></select></div></div><div class="esc-grid"><div class="product-card"><div class="product-image"><img src="https://i.ebayimg.com/images/g/EFYAAOSwTuxfsuOS/s-l400.jpg" alt="ESC Chuck"></div><div class="product-info"><h3>ESC Chuck</h3><p><strong>OEM:</strong> TEL</p><p><strong>Condition:</strong> USED</p><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="btn">Request Quote</a></div></div><div class="product-card"><div class="product-image"><img src="https://i.ebayimg.com/images/g/EFYAAOSwTuxfsuOS/s-l400.jpg" alt="ESC Chuck"></div><div class="product-info"><h3>0010-16392</h3><p><strong>OEM:</strong> AMAT</p><p><strong>Condition:</strong> Refurbished</p><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="btn">Request Quote</a></div></div><div class="product-card"><div class="product-image"><img src="https://i.ebayimg.com/images/g/EFYAAOSwTuxfsuOS/s-l400.jpg" alt="ESC Chuck"></div><div class="product-info"><h3>0200-08784</h3><p><strong>OEM:</strong> AMAT</p><p><strong>Condition:</strong> OEM</p><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="btn">Request Quote</a></div></div><div class="product-card"><div class="product-image"><img src="https://i.ebayimg.com/images/g/EFYAAOSwTuxfsuOS/s-l400.jpg" alt="ESC Chuck"></div><div class="product-info"><h3>0010-19362</h3><p><strong>OEM:</strong> AMAT</p><p><strong>Condition:</strong> Refurbished</p><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="btn">Request Quote</a></div></div></div><div class="pagination"><button>‹</button><button class="active">1</button><button>2</button><button>3</button><button>›</button></div></section>
+<section class="hero"><h1>Semiconductor Parts Sourcing</h1><p>OEM / Refurbished / Second Source Semiconductor Parts</p><div class="hero-action"><a href="#quoteStart" onclick="showHomeAndScroll('quoteStart');return false" class="hero-btn">Request Quote</a><div class="support-badge"><span class="status-dot"></span>24/7 Response Available</div></div></section>
+<section class="section"><div class="main-sections-grid"><div><h2 class="section-title" id="productCategories">Products Supply</h2><p class="repair-lead">OEM, refurbished, and second source semiconductor parts sourcing for semiconductor equipment and fabs.</p><div class="categories"><div class="category-card" onclick="showProductPage('ESC Parts',482)"><h3>ESC</h3></div><div class="category-card" onclick="showProductPage('Ceramic Parts',218)"><h3>Ceramic Parts</h3></div><div class="category-card" onclick="showProductPage('Vacuum Parts',731)"><h3>Vacuum Parts</h3></div><div class="category-card" onclick="showProductPage('Shower Head',164)"><h3>Shower Head</h3></div><div class="category-card" onclick="showProductPage('Edge Ring',95)"><h3>Edge Ring</h3></div><div class="category-card" onclick="showProductPage('RF Parts',356)"><h3>RF Parts</h3></div></div></div><div><h2 class="section-title" id="repairSection">Repair Services</h2><p class="repair-lead">Professional refurbishment and repair support for semiconductor equipment parts.</p><div class="categories"><div class="category-card" onclick="showRepairPage()"><h3>ESC Repair</h3></div><div class="category-card" onclick="showRepairPage()"><h3>Shower Head Repair</h3></div><div class="category-card" onclick="showRepairPage()"><h3>Vacuum Parts Repair</h3></div><div class="category-card" onclick="showRepairPage()"><h3>Ceramic Repair</h3></div></div></div></div></section>
+<section class="contact" id="quoteSection"><div class="quote-agent-icon" id="quoteStart"><svg width="54" height="54" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 14C14.7614 14 17 11.7614 17 9C17 6.23858 14.7614 4 12 4C9.23858 4 7 6.23858 7 9C7 11.7614 9.23858 14 12 14Z" stroke="#38bdf8" stroke-width="1.8"/><path d="M4 20C4.8 17.2 7.4 15.5 12 15.5C16.6 15.5 19.2 17.2 20 20" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/><path d="M19 8V12" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/><path d="M21 10H17" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/></svg></div><h2 class="repair-title">Need a Hard-to-Find Part?</h2><p class="repair-lead quote-lead">Send us your Part Number — DMTech will help source the right solution quickly and reliably.</p><form class="quote-form-wrapper" id="quoteForm" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="581a0c41-7261-4ee7-ad9c-d3f2f8bb4998"><input type="hidden" name="subject" value="DMTech RFQ Inquiry"><input type="hidden" name="from_name" value="DMTech Website RFQ"><div class="quote-grid"><div class="quote-field"><label>Company Name</label><input type="text" name="company" placeholder="Enter company name" required></div><div class="quote-field"><label>Contact Person</label><input type="text" name="contact_person" placeholder="Enter your name" required></div><div class="quote-field"><label>Email</label><input type="email" name="email" placeholder="Enter email address" required></div><div class="quote-field"><label>Part Number</label><input type="text" name="part_number" placeholder="Example: 0010-62632" required></div></div><div class="quote-field"><label>Inquiry Details</label><textarea name="inquiry_details" placeholder="Please enter quantity, condition, manufacturer, or additional requirements." required></textarea></div><button type="submit" class="quote-submit">Request Quote</button><p class="form-result" id="formResult"></p></form></section>
+<footer><div class="footer-container"><div class="footer-company"><h3>DMTech</h3><p>Semiconductor Parts Sourcing & Supply</p></div><div class="footer-info"><p><strong>Address :</strong> Gyeonggi-do, Republic of Korea</p><p><strong>Email :</strong> sales@dmtech.co.kr</p><p><strong>Tel :</strong> +82-31-000-0000</p><p><strong>Business :</strong> Semiconductor Parts / OEM / Refurbished Parts</p></div><div class="footer-copy">© 2026 DMTech Semiconductor Parts Supply</div></div></footer>
+<script>
+function getVisibleMainSections(){return document.querySelectorAll('.hero,.section,.contact')}
+function safeDisplay(id,value){const el=document.getElementById(id);if(el)el.style.display=value}
+function closePartsDropdown(){const d=document.getElementById('partsDropdown');if(d)d.classList.remove('active')}
+function setActiveMenu(page){document.querySelectorAll('#topMenu a').forEach(a=>a.classList.remove('menu-active'));document.querySelector('.home-icon-btn')?.classList.remove('home-active');const map={products:0,repair:1,about:2,contact:3};const links=document.querySelectorAll('#topMenu a');if(links[map[page]])links[map[page]].classList.add('menu-active')}
+function hideAllPages(){getVisibleMainSections().forEach(s=>s.style.display='none');['aboutPage','contactPage','escPage','repairPage'].forEach(id=>safeDisplay(id,'none'))}
+function showHomePage(){getVisibleMainSections().forEach(s=>s.style.display='');['aboutPage','contactPage','escPage','repairPage'].forEach(id=>safeDisplay(id,'none'));document.querySelectorAll('#topMenu a').forEach(a=>a.classList.remove('menu-active'));document.querySelector('.home-icon-btn')?.classList.add('home-active');closePartsDropdown();window.scrollTo({top:0,behavior:'smooth'})}
+function showAboutPage(){hideAllPages();safeDisplay('aboutPage','block');setActiveMenu('about');closePartsDropdown();window.scrollTo({top:0,behavior:'smooth'})}
+function showContactPage(){hideAllPages();safeDisplay('contactPage','block');setActiveMenu('contact');closePartsDropdown();window.scrollTo({top:0,behavior:'smooth'})}
+function showRepairPage(){hideAllPages();safeDisplay('repairPage','block');setActiveMenu('repair');closePartsDropdown();window.scrollTo({top:0,behavior:'smooth'})}
+function showESCPage(){showProductPage('ESC Parts',482)}
+function showProductPage(title,total){hideAllPages();safeDisplay('escPage','block');setActiveMenu('products');closePartsDropdown();const titleText=document.getElementById('partsTitleText');if(titleText)titleText.textContent=title;['manufacturerFilter','sourceFilter','conditionFilter'].forEach(id=>{const el=document.getElementById(id);if(el){el.selectedIndex=0;el.classList.remove('filter-active')}});const partsCount=document.getElementById('partsCount');if(partsCount)partsCount.textContent=total+' Parts';window.currentPartsTotal=total;window.scrollTo({top:0,behavior:'smooth'})}
+function showHomeAndScroll(id){getVisibleMainSections().forEach(s=>s.style.display='');['aboutPage','contactPage','escPage','repairPage'].forEach(page=>safeDisplay(page,'none'));document.querySelectorAll('#topMenu a').forEach(a=>a.classList.remove('menu-active'));document.querySelector('.home-icon-btn')?.classList.add('home-active');closePartsDropdown();setTimeout(()=>{const target=document.getElementById(id);if(target){const offset=id==='quoteStart'?225:110;const y=target.getBoundingClientRect().top+window.pageYOffset-offset;window.scrollTo({top:y,behavior:'smooth'})}},120)}
+function togglePartsDropdown(event){if(event)event.stopPropagation();const d=document.getElementById('partsDropdown');if(d)d.classList.toggle('active')}
+document.addEventListener('click',event=>{const t=document.querySelector('.parts-title-select');if(t&&!t.contains(event.target))closePartsDropdown()})
+function setCategoryTotal(total){window.currentPartsTotal=total;['manufacturerFilter','sourceFilter','conditionFilter'].forEach(id=>{const el=document.getElementById(id);if(el){el.selectedIndex=0;el.classList.remove('filter-active')}});updatePartsCount()}
+function updatePartsCount(){['manufacturerFilter','sourceFilter','conditionFilter'].forEach(id=>{const el=document.getElementById(id);if(el)el.classList.toggle('filter-active',!!el.value)});const m=document.getElementById('manufacturerFilter')?.value||'';const s=document.getElementById('sourceFilter')?.value||'';const c=document.getElementById('conditionFilter')?.value||'';const partsCount=document.getElementById('partsCount');const total=window.currentPartsTotal||482;let selectedCount=total;const active=[m,s,c].filter(Boolean).length;if(active>0){const min=5;const max=Math.max(15,total-active*70);selectedCount=Math.floor(Math.random()*(max-min+1))+min}if(partsCount){partsCount.innerHTML=selectedCount===total?total+' Parts':'<span style="color:#38bdf8;font-weight:800">'+selectedCount+'</span> / '+total+' Parts'}}
+const quoteForm=document.getElementById('quoteForm');const formResult=document.getElementById('formResult');if(quoteForm){quoteForm.addEventListener('submit',async event=>{event.preventDefault();if(!formResult)return;formResult.textContent='Sending your inquiry...';formResult.className='form-result';const formData=new FormData(quoteForm);const btn=quoteForm.querySelector('.quote-submit');if(btn){btn.disabled=true;btn.textContent='Sending...'}try{const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:formData});const data=await res.json();if(data.success){formResult.textContent='Your inquiry has been sent successfully.';formResult.className='form-result success';quoteForm.reset()}else{formResult.textContent='Submission failed. Please try again or contact us by email.';formResult.className='form-result error'}}catch(error){formResult.textContent='Submission is blocked in preview. It should work after deployment, or contact us by email.';formResult.className='form-result error'}if(btn){btn.disabled=false;btn.textContent='Request Quote'}})}
+console.assert(typeof showHomePage==='function','showHomePage should be defined');console.assert(typeof showESCPage==='function','showESCPage should be defined');console.assert(typeof showRepairPage==='function','showRepairPage should be defined');console.assert(typeof showProductPage==='function','showProductPage should be defined');showHomePage();
+</script>
 </body>
 </html>
