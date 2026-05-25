@@ -15,12 +15,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#f5f7f8] text-[#1f2933] font-sans">
-      <header className="sticky top-0 z-50 border-b border-[#d9e1e7] bg-white/95 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 border-b border-[#d9e1e7] bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
           <img
             src="https://github.com/suk9lee72-wq/dmtech-homepage/blob/main/public/logo.png?raw=true"
             alt="DMTech"
-            className="h-7 w-auto md:h-9"
+            className="mt-1 h-7 w-auto md:mt-1 md:h-9"
           />
 
           <nav className="flex items-center gap-5 text-[13px] font-semibold text-[#26323f] md:gap-7 md:text-[14px]">
